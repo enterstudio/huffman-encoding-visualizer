@@ -1,4 +1,4 @@
-# Huffman Encoding Visualizer
+# Huffman Encoding Visualizer ![](https://travis-ci.org/WesCossick/huffman-encoding-visualizer.svg?branch=tests)
 Originally assigned as a group project for the Baylor University undergraduate algorithms course, we decided to take it one step further. We wanted to create something that not only met the project requirements, but also exceeded expectations, resulting in a project that is open source, useful, and innovative, plus looks mighty fine. Created using only JavaScript, HTML, and CSS, the project can be run locally with the source code, or on any web server, because it has no server-side dependencies.
 
 ## How to use
