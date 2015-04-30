@@ -1,3 +1,10 @@
 language: node_js
 node_js:
   - "0.10"
+notifications:
+  email:
+    recipients:
+      - wcossick@gmail.com
+      - evan_green@baylor.edu
+    on_success: never
+    on_failure: always
