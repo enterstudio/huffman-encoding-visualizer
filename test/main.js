@@ -82,7 +82,7 @@ describe('qunit-phantomjs-runner runner.js', function () {
 		qunit();
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/Usage:\n  phantomjs \[phantom arguments\] runner.js \[url-of-your-qunit-testsuite\] \[timeout-in-seconds\]/.test(str));
 			process.stdout.write = out;
@@ -95,7 +95,7 @@ describe('qunit-phantomjs-runner runner.js', function () {
 		qunit('test/fixtures/no-tests.html');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/No tests were executed. Are you loading tests asynchronously?/.test(str));
 			process.stdout.write = out;
@@ -108,7 +108,7 @@ describe('qunit-phantomjs-runner runner.js', function () {
 		qunit('test/fixtures/no-qunit.html');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/The `QUnit` object is not present on this page./.test(str));
 			process.stdout.write = out;
@@ -122,7 +122,7 @@ describe('qunit-phantomjs-runner runner.js', function () {
 		qunit('test/fixtures/async.html', '../runner.js', 1);
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/The specified timeout of 1 seconds has expired. Aborting.../.test(str));
 			process.stdout.write = out;
@@ -135,7 +135,7 @@ describe('qunit-phantomjs-runner runner.js', function () {
 		qunit('test/fixtures/not-found.html');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/Unable to access network:/.test(str));
 			process.stdout.write = out;
@@ -169,7 +169,7 @@ describe('qunit-phantomjs-runner runner-list.js', function () {
 		qunit('test/fixtures/passing.html', '../runner-list.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/10 passed. 0 failed./.test(str));
 			process.stdout.write = out;
@@ -182,7 +182,7 @@ describe('qunit-phantomjs-runner runner-list.js', function () {
 		qunit('test/fixtures/failing.html', '../runner-list.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/9 passed. 1 failed./.test(str));
 			process.stdout.write = out;
@@ -195,7 +195,7 @@ describe('qunit-phantomjs-runner runner-list.js', function () {
 		qunit('test/fixtures/no-tests.html', '../runner-list.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/No tests were executed. Are you loading tests asynchronously?/.test(str));
 			process.stdout.write = out;
@@ -208,7 +208,7 @@ describe('qunit-phantomjs-runner runner-list.js', function () {
 		qunit('test/fixtures/no-qunit.html', '../runner-list.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/The `QUnit` object is not present on this page./.test(str));
 			process.stdout.write = out;
@@ -222,7 +222,7 @@ describe('qunit-phantomjs-runner runner-list.js', function () {
 		qunit('test/fixtures/async.html', '../runner-list.js', 1);
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/The specified timeout of 1 seconds has expired. Aborting.../.test(str));
 			process.stdout.write = out;
@@ -235,7 +235,7 @@ describe('qunit-phantomjs-runner runner-list.js', function () {
 		qunit('test/fixtures/not-found.html', '../runner-list.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/Unable to access network:/.test(str));
 			process.stdout.write = out;
@@ -252,7 +252,7 @@ describe('qunit-phantomjs-runner runner-json.js', function () {
 		qunit('test/fixtures/passing.html', '../runner-json.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/"failed":0,"passed":10,"total":10/.test(str));
 			process.stdout.write = out;
@@ -265,7 +265,7 @@ describe('qunit-phantomjs-runner runner-json.js', function () {
 		qunit('test/fixtures/failing.html', '../runner-json.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/"failed":1,"passed":9,"total":10/.test(str));
 			process.stdout.write = out;
@@ -278,7 +278,7 @@ describe('qunit-phantomjs-runner runner-json.js', function () {
 		qunit('test/fixtures/no-tests.html', '../runner-json.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/No tests were executed. Are you loading tests asynchronously?/.test(str));
 			process.stdout.write = out;
@@ -291,7 +291,7 @@ describe('qunit-phantomjs-runner runner-json.js', function () {
 		qunit('test/fixtures/no-qunit.html', '../runner-json.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/The `QUnit` object is not present on this page./.test(str));
 			process.stdout.write = out;
@@ -305,7 +305,7 @@ describe('qunit-phantomjs-runner runner-json.js', function () {
 		qunit('test/fixtures/async.html', '../runner-json.js', 1);
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/The specified timeout of 1 seconds has expired. Aborting.../.test(str));
 			process.stdout.write = out;
@@ -318,7 +318,7 @@ describe('qunit-phantomjs-runner runner-json.js', function () {
 		qunit('test/fixtures/not-found.html', '../runner-json.js');
 
 		process.stdout.write = function (str) {
-			//out(str);
+			out(str);
 
 			assert.ok(/Unable to access network:/.test(str));
 			process.stdout.write = out;
