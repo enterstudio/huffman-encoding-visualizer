@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QUnit Test Suite</title>
+	<link rel="stylesheet" href="../../node_modules/qunitjs/qunit/qunit.css" type="text/css" media="screen">
+	<script type="text/javascript" src="../../node_modules/qunitjs/qunit/qunit.js"></script>
+	
+	<!-- libraries -->
+	<script src="js/libraries/priority-queue.js"></script>
+	
+	<!-- huffman scripts -->
+	<script src="js/huffman/build_character_nodes.js"></script>
+	<script src="js/huffman/build_tree.js"></script>
+	<script src="js/huffman/build_path.js"></script>
+	<script src="js/huffman/encode_string.js"></script>
+	
+	<!-- file scripts -->
+	<script src="js/file/input.js"></script>
+	<script src="js/file/output.js"></script>
+	
+	<!-- text scripts -->
+	<script src="js/text/input.js"></script>
+</head>
+<body>
+	<div id="qunit"></div>
+	<div id="qunit-fixture"></div>
+
+	<script>
+	test('build_character_nodes(input)', function() {
+		ok(JSON.stringify(build_character_nodes("abcdd")) == "", "Input: abcdd"+JSON.stringify(build_character_nodes("abcdd"));
+	});
+	</script>
+</body>
+</html>
